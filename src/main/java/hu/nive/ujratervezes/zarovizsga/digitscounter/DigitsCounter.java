@@ -1,14 +1,13 @@
 package hu.nive.ujratervezes.zarovizsga.digitscounter;
 
-import java.util.Map;
 import java.util.TreeMap;
 
 public class DigitsCounter {
 
     public int getCountOfDigits(String s){
 
-        String NUMBERS = "0123456789";
-        Map<String, Integer> map = new TreeMap();
+        final String NUMBERS = "0123456789";
+        TreeMap<String, Integer> map = new TreeMap();
 
         if (s == null || s.isEmpty()){
             return 0;

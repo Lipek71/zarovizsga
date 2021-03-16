@@ -7,7 +7,7 @@ import java.nio.file.Path;
 public class WorkHours {
     public String minWork(String file) {
         String minWorkerDay;
-        Path filePath = Path.of("src/test/resources/hu/nive/ujratervezes/zarovizsga/workhours/workhours.txt");
+        Path filePath = Path.of(file);
         try (BufferedReader br = new BufferedReader(Files.newBufferedReader(filePath))) {
             String line = br.readLine();
             minWorkerDay = line.split(",")[0] + ": " + line.split(",")[2];

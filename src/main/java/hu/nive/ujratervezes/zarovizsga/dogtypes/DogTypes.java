@@ -2,12 +2,10 @@ package hu.nive.ujratervezes.zarovizsga.dogtypes;
 
 import org.mariadb.jdbc.MariaDbDataSource;
 
-import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,19 +47,6 @@ public class DogTypes {
             throw new IllegalStateException("Can't query", sqle);
         }
         return dogsName;
-    }
-
-    public static void main(String[] args) throws SQLException {
-        MariaDbDataSource dataSource;
-        dataSource = new MariaDbDataSource();
-        dataSource.setUrl("jdbc:mariadb://localhost:3306/employees?useUnicode=true");
-        dataSource.setUser("employees");
-        dataSource.setPassword("employees");
-
-        DogTypes dogTypes = new DogTypes(dataSource);
-
-        System.out.println(dogTypes.getDogsByCountry("hungary"));
-        System.out.println(dogTypes.getDogsByCountry("hungary").size());
     }
 
 }
