@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BeagleTest {
-/*
+
     @Test
     void testCreate() {
         Beagle beagle = new Beagle("Bigli");
@@ -26,5 +26,5 @@ class BeagleTest {
         beagle.play(3);
         assertEquals(6, beagle.getHappiness());
     }
-*/
+
 }
