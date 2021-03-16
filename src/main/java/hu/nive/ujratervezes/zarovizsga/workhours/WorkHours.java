@@ -12,10 +12,11 @@ public class WorkHours {
             String line = br.readLine();
             minWorkerDay = line.split(",")[0] + ": " + line.split(",")[2];
             int minHours = Integer.parseInt(line.split(",")[1]);
-
             while ((line = br.readLine()) != null) {
+
                 if(Integer.parseInt(line.split(",")[1]) < minHours){
                     minWorkerDay = line.split(",")[0] + ": " + line.split(",")[2];
+                    minHours = Integer.parseInt(line.split(",")[1]);
                 }
             }
         } catch (IOException ioe) {
