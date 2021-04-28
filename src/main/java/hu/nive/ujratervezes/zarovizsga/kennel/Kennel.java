@@ -36,10 +36,13 @@ public class Kennel {
     }
 
     public void playWith(String name, int hours) {
-        for (Dog dog : dogs) {
-            if (dog.getName().equalsIgnoreCase(name)) {
-                dog.play(hours);
-            }
+        //for (Dog dog : dogs) {
+            //if (dog.getName().equalsIgnoreCase(name)) {
+            //    dog.play(hours);
+            //}
+        //}
+        if (findByName(name) != null){
+            findByName(name).play(hours);
         }
     }
 
